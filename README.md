@@ -1,20 +1,32 @@
-## Minecraft Forge Docker Image (No Official)
+# Minecraft Forge Docker Image (No Official)
 
 > [!NOTE]
 > This is using [Amazon Corretto 21](https://hub.docker.com/_/amazoncorretto) base image.
 
-How to run:
+## How to run:
+
+You can pull the image from my [Docker Hub Repo](https://hub.docker.com/repository/docker/cairoatcode/minecraft-forge):
+
+> [!NOTE]
+> Change "tag" in the next commands for the version you are looking for, see the Repo to check.
+
+```shell
+
+docker push cairoatcode/minecraft-forge:tag
+
+```
 
 Set your world (if any), mods and config folders, use those routes for volumes. Set this before you create your world.
 
 Commands Assuming I want my mods, config and world folders in the current directory
-For windows:
+
+## For windows:
 
 ```shell
 docker run -d -p 25565:25565 -v  ${PWD}/mods:/minecraft/mods -v  ${PWD}/config:/minecraft/config -v  ${PWD}/world:/minecraft/world --name forge-server cairoatcode/minecraft-forge:tag
 ```
 
-For Linux/MacOS:
+## For Linux/MacOS:
 
 ```shell
 docker run -d -p 25565:25565 \
@@ -24,7 +36,7 @@ docker run -d -p 25565:25565 \
        --name forge-server cairoatcode/minecraft-forge:tag
 ```
 
-If you want to change the Minecraft Forge version, you can do next command:
+## Need different Forge version?
 
 ```shell
 
