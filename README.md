@@ -8,11 +8,11 @@
 You can pull the image from my [Docker Hub Repo](https://hub.docker.com/repository/docker/cairoatcode/minecraft-forge):
 
 > [!NOTE]
-> Change "tag" in the next commands for the version you are looking for, see the Repo to check.
+> Change "tag" in the next commands for the version you are looking for, see the Docker Hub to check.
 
 ```shell
 
-docker push cairoatcode/minecraft-forge:tag
+docker pull cairoatcode/minecraft-forge:tag
 
 ```
 
